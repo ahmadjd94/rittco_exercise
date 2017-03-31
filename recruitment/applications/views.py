@@ -11,7 +11,7 @@ def success(request):
 
 def new (request):
   if request.method =="POST":
-    form = ApplicationForm(request.POST)
+    form = ApplicationForm(request.POST, request.FILES)
     application = form.save(commit=False)
     application.save()
     return HttpResponseRedirect('./success')

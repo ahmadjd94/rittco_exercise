@@ -22,6 +22,6 @@ class ApplicationForm(forms.ModelForm):
     "applicant_school",
     "applicant_graduation_date",
     "applicant_email",
-    # "applicant_photo",  #use AWS ? 
+     "applicant_photo",  #use AWS ? 
     "applicant_about"
     ]

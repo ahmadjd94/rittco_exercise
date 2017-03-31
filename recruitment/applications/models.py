@@ -18,7 +18,7 @@ class Application(models.Model):
     applicant_school = models.TextField(null = True)
     applicant_graduation_date = models.DateField(null = True)
     applicant_email = models.EmailField(null = True)
-    applicant_photo = models.ImageField(null = True)
+    applicant_photo = models.ImageField(null = True,upload_to ='/avatars')
     applicant_about = models.TextField(max_length = 500,null = True)
 
 
