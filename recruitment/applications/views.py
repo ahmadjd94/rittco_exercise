@@ -4,7 +4,7 @@ from .models import Application
 from django.http import HttpResponse,HttpResponseRedirect
 
 def index(request):
-  return HttpResponse("<h1>WTF</h1>")
+  return HttpResponse(render(request,"applications/home.html"))
 
 def success(request):
   return HttpResponse(render(request,"applications/success.html"))
