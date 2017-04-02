@@ -1,0 +1,16 @@
+<table>
+<tr>
+<th>Appliacnt name</th>
+<th>Appliacnt birthdate</th>
+<th>Appliacnt major</th>
+</tr>
+{% for response in all_responses%}
+  
+  <td>{{response.applicant_name}}</td>
+  <td>{{response.applicant_birthdate}}</td>
+  <td>{{response.applicant_major}}</td>
+  
+  </tr>
+
+{%endfor%}
+</table>
