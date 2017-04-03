@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from .forms import ApplicationForm
 from .models import Application
+from .models import Admin_Application
 from django.http import HttpResponse,HttpResponseRedirect
+
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+
 
 def index(request):
   return HttpResponse(render(request,"applications/home.html"))
@@ -13,7 +19,7 @@ def new (request):
   if request.method =="POST":
     form = ApplicationForm(request.POST, request.FILES)
     application = form.save(commit=False)
-    application.save()
+    result=application.save()
     return HttpResponseRedirect('./success')
 
   else:
