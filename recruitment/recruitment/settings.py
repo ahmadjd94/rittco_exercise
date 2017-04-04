@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'applications',
-    'management',
+    'recruitment',
     'django_countries',
     'django.contrib.admin',
     'django.contrib.auth',

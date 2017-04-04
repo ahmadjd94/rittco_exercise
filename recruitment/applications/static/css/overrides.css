@@ -1,3 +1,6 @@
 .container {
   margin-left:10%; 
 }
+.menu_item {
+  display: inline;
+}
