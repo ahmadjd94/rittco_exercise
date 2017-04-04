@@ -6,10 +6,6 @@ from django.db.models.signals import post_save
 
 # Create your models here.
 
-class Admin_Application(models.Model):
-    application = models.ForeignKey("Application",null =True,unique= True)
-    admin =models.ForeignKey(User,null =True)
-    accepted =models.NullBooleanField(null =True)
 
 class Application(models.Model):
     #ID field is not specified since it's a default
@@ -27,16 +23,14 @@ class Application(models.Model):
     applicant_email = models.EmailField(null = True)
     applicant_photo = models.ImageField(null = True,upload_to ='avatars')
     applicant_about = models.TextField(max_length = 500,null = True)
-
+    accepted =models.NullBooleanField(null =True)
+    admin =models.OneToOneField(User,null =True)
+    
 
     def __str__(self):
-        return self.applicant_name
+        return (self.applicant_name)
 
-def create_relation(sender,**kwargs):
-    relation =Admin_Application(application_id= kwargs['instance'].id)
-    relation.save()
 
-post_save.connect(create_relation,sender=Application)
     
         
 

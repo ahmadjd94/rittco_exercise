@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .forms import ApplicationForm
 from .models import Application
-from .models import Admin_Application
 from django.http import HttpResponse,HttpResponseRedirect
 
 from django.db.models.signals import post_save
