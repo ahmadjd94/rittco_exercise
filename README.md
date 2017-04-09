@@ -10,8 +10,9 @@ after installing the previous library you will need to run migrations to setup t
   
 after running the migrations for internal modules you will need to make a migration for the custome made application (application) which is responsible for storing the user's submitted application :
   1) python3 manage.py makemigrations applications
-  2) python3 manage.py migrate applications
- after running the previous migrations you can now run the server at a local environment, on your terminal run the following command :
+  2) python3 manage.py migrate applications 
+  
+after running the previous migrations you can now run the server at a local environment, on your terminal run the following command :
   python3 manage.py runserver
  the previous command will run a local server at port 8000 
   *to visit the server enter the following url in your browser : 127.0.0.1:8000 
