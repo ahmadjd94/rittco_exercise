@@ -5,17 +5,17 @@ this is an excercise project using djnago framework
 
 
 after installing the previous library you will need to run migrations to setup the database schema required by the internal modules on django (such as the admin module):
-  cd recruitment/
-  python3 manage.py migrate
+  1) cd recruitment/
+  2) python3 manage.py migrate
   
 after running the migrations for internal modules you will need to make a migration for the custome made application (application) which is responsible for storing the user's submitted application :
-  python3 manage.py makemigrations applications
-  python3 manage.py migrate applications
+  1) python3 manage.py makemigrations applications
+  2) python3 manage.py migrate applications
  after running the previous migrations you can now run the server at a local environment, on your terminal run the following command :
   python3 manage.py runserver
  the previous command will run a local server at port 8000 
-  to visit the server enter the following url in your browser : 127.0.0.1:8000 
-  to submit an application follow the link (submit new application) in the broswer 
+  *to visit the server enter the following url in your browser : 127.0.0.1:8000 
+  *to submit an application follow the link (submit new application) in the broswer 
   
   managing recieved applications :
   the recruitment application is integrated with django's built-in admin feature, you can sign in as an administartor to manage recieved applications 
